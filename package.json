@@ -1,0 +1,13 @@
+{
+  "name": "custom-tslint-rules",
+  "version": "1.0.0",
+  "description": "Custom TSLint rules",
+  "main": "index.js",
+  "repository": "git@github.com:thundernet8/CustomTSLintRules.git",
+  "author": "wuxueqian <wuxueqian2010@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^8.5.1",
+    "typescript": "^2.6.2"
+  }
+}
