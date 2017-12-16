@@ -1,5 +1,5 @@
 {
-    "name": "custom-tslint-rules",
+    "name": "custom-tslint-rules-collection",
     "version": "1.0.0",
     "description": "Custom TSLint rules",
     "main": "tslint-custom.json",
@@ -14,7 +14,8 @@
     },
     "peerDependencies": {
         "tslint": "^5.1.0",
-        "typescript": ">=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev"
+        "typescript":
+            ">=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev"
     },
     "devDependencies": {
         "@types/mocha": "^2.2.44",

@@ -18,11 +18,11 @@
 
 ## Install
 
-`npm install custom-tslint-rules --save-dev`
+`npm install custom-tslint-rules-collection --save-dev`
 
 or
 
-`yarn add custom-tslint-rules --dev`
+`yarn add custom-tslint-rules-collection --dev`
 
 ## Usage
 
@@ -32,7 +32,7 @@ To use these lint rules with the default preset, use configuration inheritance v
 
 ```
 {
-  "extends": ["tslint:latest", "custom-tslint-rules"],
+  "extends": ["tslint:latest", "custom-tslint-rules-collection"],
   "rules": {
     // override custom-tslint-rules rules here
     "tsx-no-any-props": false
