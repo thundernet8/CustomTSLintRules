@@ -1,5 +1,5 @@
 {
-    "extends": ["tslint-react", "tslint-eslint-rules"],
+    "extends": ["tslint-eslint-rules"],
     "rules": {
         "align": [true, "parameters", "statements"],
         "class-name": true,
@@ -98,12 +98,6 @@
             "check-separator",
             "check-type",
             "check-typecast"
-        ],
-        "jsx-no-lambda": false,
-        "jsx-no-string-ref": false,
-        "jsx-boolean-value": [true, "never"],
-        "jsx-wrap-multiline": false,
-        "jsx-alignment": false,
-        "jsx-no-multiline-js": false
+        ]
     }
 }
