@@ -4,7 +4,11 @@
         "allowSyntheticDefaultImports": true,
         "allowJs": true,
         "target": "es2015",
-        "lib": ["es2016", "dom"],
+        "lib": [
+            "es2016.array.include",
+            "es2016",
+            "dom"
+        ],
         "module": "commonjs",
         "noImplicitAny": false,
         "removeComments": true,
@@ -14,9 +18,20 @@
         "strictNullChecks": false,
         "noUnusedLocals": true,
         "outDir": "./lib",
-        "types": ["node"]
+        "types": [
+            "node"
+        ]
     },
-    "include": ["./src/index.ts"],
-    "exclude": ["node_modules", "**/*.spec.ts?", "**/*.d.ts?", "lib"],
-    "typeRoots": ["node_modules/@types"]
+    "include": [
+        "./src/"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts?",
+        "**/*.d.ts?",
+        "lib"
+    ],
+    "typeRoots": [
+        "node_modules/@types"
+    ]
 }

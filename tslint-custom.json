@@ -1,0 +1,7 @@
+{
+    "rulesDirectory": "./lib/rules",
+    "rules": {
+        "tsx-no-any-props": true,
+        "tsx-no-any-state": true
+    }
+}
