@@ -9,13 +9,12 @@
     "scripts": {
         "build": "rimraf ./lib && tsc",
         "test": "ts-mocha -p ./ test/**/*.spec.ts",
-        "lint": "tslint --project tsconfig.json --format codeFrame",
+        "lint": "tslint -p tsconfig.json -c .tslintrc.json src/**/*.ts",
         "verify": "npm-run-all build lint test"
     },
     "peerDependencies": {
         "tslint": "^5.1.0",
-        "typescript":
-            ">=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev"
+        "typescript": ">=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev"
     },
     "devDependencies": {
         "@types/mocha": "^2.2.44",
@@ -24,6 +23,7 @@
         "npm-run-all": "^4.1.2",
         "rimraf": "^2.6.2",
         "ts-mocha": "^1.0.3",
+        "tslint-eslint-rules": "^4.1.1",
         "typescript": "^2.6.2"
     },
     "dependencies": {
