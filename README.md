@@ -18,11 +18,34 @@
 
 ## Install
 
-TODO
+`npm install custom-tslint-rules --save-dev`
+
+or
+
+`yarn add custom-tslint-rules --dev`
 
 ## Usage
 
-TODO
+custom-tslint-rules has peer dependencies on TSLint and TypeScript.
+
+To use these lint rules with the default preset, use configuration inheritance via the extends keyword. Here's a sample configuration where tslint.json lives adjacent to your node_modules folder:
+
+```
+{
+  "extends": ["tslint:latest", "custom-tslint-rules"],
+  "rules": {
+    // override custom-tslint-rules rules here
+    "tsx-no-any-props": false
+  }
+}
+```
+
+To lint your .ts and .tsx files you can simply run tslint -c tslint.json 'src/\*_/_.{ts,tsx}'.
+
+## Rules
+
+* [x] `tsx-no-any-props`
+* [x] `tsx-no-any-state`
 
 ## License
 
