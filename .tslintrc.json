@@ -12,27 +12,19 @@
         "jsdoc-format": false,
         "label-position": true,
         "max-line-length": [false, 120],
-        // "member-ordering": [
-        //     true,
-        //     {
-        //         "order": "statics-first"
-        //     }
-        // ],
+        "member-ordering": [
+            true,
+            {
+                "order": "statics-first"
+            }
+        ],
         "new-parens": true,
         "no-any": false,
         "no-arg": true,
         "no-bitwise": true,
         "no-conditional-assignment": true,
         "no-consecutive-blank-lines": true,
-        "no-console": [
-            true,
-            "debug",
-            "info",
-            // "log",
-            "time",
-            "timeEnd",
-            "trace"
-        ],
+        "no-console": [true, "debug", "info", "log", "time", "timeEnd", "trace"],
         "no-construct": true,
         "no-constructor-vars": false,
         "no-debugger": true,
