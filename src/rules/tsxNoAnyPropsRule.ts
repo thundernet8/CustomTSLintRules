@@ -23,37 +23,39 @@ export class Rule extends Lint.Rules.AbstractRule {
 
 class NoAnyPropsWalker extends Lint.RuleWalker {
     public visitClassDeclaration(node: ts.ClassDeclaration) {
-        node.heritageClauses.forEach(({ types }) => {
-            types.forEach(({ expression, typeArguments }) => {
-                const expressionTxt = expression.getText();
-                if (
-                    Array.isArray(typeArguments) &&
-                    typeArguments.length > 0 &&
-                    [
-                        "React.Component",
-                        "React.PureComponent",
-                        "Component",
-                        "PureComponent"
-                    ].includes(expressionTxt)
-                ) {
-                    // if props is any type
-                    const propsNode: ts.TypeNode = typeArguments[0];
+        if (node.heritageClauses) {
+            node.heritageClauses.forEach(({ types }) => {
+                types.forEach(({ expression, typeArguments }) => {
+                    const expressionTxt = expression.getText();
                     if (
-                        propsNode !== undefined &&
-                        propsNode !== null &&
-                        propsNode.kind === ts.SyntaxKind.AnyKeyword
+                        Array.isArray(typeArguments) &&
+                        typeArguments.length > 0 &&
+                        [
+                            "React.Component",
+                            "React.PureComponent",
+                            "Component",
+                            "PureComponent"
+                        ].includes(expressionTxt)
                     ) {
-                        this.addFailure(
-                            this.createFailure(
-                                propsNode.getStart(),
-                                propsNode.getWidth(),
-                                Rule.FAILURE_STRING
-                            )
-                        );
+                        // if props is any type
+                        const propsNode: ts.TypeNode = typeArguments[0];
+                        if (
+                            propsNode !== undefined &&
+                            propsNode !== null &&
+                            propsNode.kind === ts.SyntaxKind.AnyKeyword
+                        ) {
+                            this.addFailure(
+                                this.createFailure(
+                                    propsNode.getStart(),
+                                    propsNode.getWidth(),
+                                    Rule.FAILURE_STRING
+                                )
+                            );
+                        }
                     }
-                }
+                });
             });
-        });
+        }
 
         super.visitClassDeclaration(node);
     }
