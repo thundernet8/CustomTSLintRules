@@ -44,12 +44,9 @@ class NoAnyPropsWalker extends Lint.RuleWalker {
                             propsNode !== null &&
                             propsNode.kind === ts.SyntaxKind.AnyKeyword
                         ) {
-                            this.addFailure(
-                                this.createFailure(
-                                    propsNode.getStart(),
-                                    propsNode.getWidth(),
-                                    Rule.FAILURE_STRING
-                                )
+                            this.addFailureAtNode(
+                                propsNode,
+                                Rule.FAILURE_STRING
                             );
                         }
                     }
